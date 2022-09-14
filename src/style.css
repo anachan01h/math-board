@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    background-color: #2E5B34;
+    color: #FFFFFF;
+    font-family: sans-serif;
+}
+
+div#env {
+    width: 100%;
+    height: 100%;
+}
