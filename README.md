@@ -14,7 +14,7 @@ Um quadro virtual, onde você pode escrever frases com símbolos matemáticos do
 - Fazer uma interface mais bonitinha.
 
 ## Como usar
-O quadro está disponível na página do Github deste repositório: [link](mathboard).
+O quadro está disponível na página do Github deste repositório: [link][mathboard].
 
 Para usar, é só escrever o texto desejado na barra de texto e clicar em criar. Irá aparecer uma caixa de texto na tela, com a notação matemática já renderizada.
 
