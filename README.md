@@ -4,12 +4,12 @@ Um quadro virtual, onde você pode escrever frases com símbolos matemáticos do
 
 ## Funções disponíveis
 - Criar caixas de texto, com símbolos matemáticos do LaTeX escritos entre "$"'s (inline math);
-- Deletar caixas de texto.
+- Deletar caixas de texto;
+- Ferramenta para desenhar diretamente no quadro;
+- Ferramenta para apagar desenhos do quadro.
 
 ## Funções que irei implementar
 - Selecionar e editar os textos de caixas de textos existentes;
-- Ferramenta para desenhar diretamente no quadro;
-- Ferramenta para apagar desenhos do quadro;
 - Editar cor do texto, desenhos e do próprio quadro;
 - Fazer uma interface mais bonitinha.
 

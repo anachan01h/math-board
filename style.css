@@ -2,9 +2,10 @@
     box-sizing: border-box;
 }
 
+/* Screen Configuration ----------------------------------------------------- */
+
 html {
     height: 100%;
-    /* border: 1px solid red; */
 }
 
 body {
@@ -13,21 +14,55 @@ body {
     color: #FFFFFF;
     font-family: sans-serif;
     height: calc(100% - 16px);
-    /* border: 1px solid red; */
 }
 
 div#env {
-    height: 85%;
-    /* border: 1px solid red; */
+    height: calc(85% - 13px);
+    border: 2px solid #888;
 }
 
-form {
+canvas#painting-area {
+    z-index: 8192;
+    position: relative;
+}
+
+/* Paint Options ------------------------------------------------------------ */
+
+div#bar {
+    color: #FFF;
     height: 15%;
 }
 
-textarea#input {
+div#paint {
+    display: inline;
+    float: left;
+    height:100%;
+    width: 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div#paint button {
+    border: 2px solid #800;
+}
+
+/* Text Input --------------------------------------------------------------- */
+
+div#text {
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+
+div#text form {
     width: 100%;
-    height: calc(100% - 20px);
+    height: 100%;
+}
+
+textarea#input {
+    float: left;
+    width: 95%;
+    height: 100%;
     background-color: #000;
     color: #888;
     border: 2px solid #888;
@@ -35,16 +70,12 @@ textarea#input {
     font-weight: bold;
 }
 
-#options {
-    width: 100%;
-    height: 20px;
-    background-color: #000;
-}
-
 button#button {
-    float: right;
-    height: 20px;
-    border: none;
+    float: left;
+    margin-top: 1px;
+    width: 5%;
+    height: 100%;
+    border: 2px solid #888;
     background-color: #000;
     color: #FFF;
     font-weight: bold;
@@ -52,4 +83,22 @@ button#button {
 
 button#button:hover {
     background-color: #888;
+}
+
+/* Footer ------------------------------------------------------------------- */
+
+footer {
+    padding: 2px;
+    font-family: monospace;
+    color: #F28AA7;
+    font-weight: bold;
+    text-align: center;
+}
+
+footer a {
+    color: #F28AA7;
+}
+
+footer a:hover {
+    color: #D06885;
 }

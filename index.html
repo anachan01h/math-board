@@ -4,19 +4,30 @@
 	<title>Math Board</title>
 	<link rel="stylesheet" type="text/css" href="./style.css" />
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <script type="text/javascript" src="./src/code.js" defer></script>
     <!-- MathJax -->
     <script id="MathJax-script" type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
-    <div id="env"></div>
-    <form name="form" onsubmit="return false;">
-        <textarea id="input" autofocus></textarea>
-        <div id="options">
-            <button id="button" type="submit" onclick="createBox();">Criar</button>
+    <div id="env">
+        <canvas id="painting-area"></canvas>
+    </div>
+    <div id="bar">
+        <div id="paint">
+            <button onclick="changeTool(0)">Caixa de texto</button>
+            <button onclick="changeTool(1)">Desenho livre</button>
+            <button onclick="changeTool(2)">Borracha</button>
         </div>
-    </form>
-    <footer></footer>
+        <div id="text">
+            <form name="form" onsubmit="return false;">
+                <textarea id="input" autofocus></textarea>
+                <button id="button" onclick="createBox();">▷</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        by <a href="https://github.com/anachan01h">@anachan01h</a>
+    </footer>
 </body>
 </html>
