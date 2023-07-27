@@ -1,33 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Math Board</title>
-	<link rel="stylesheet" type="text/css" href="./style.css" />
-	<meta charset="utf-8" />
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-    <script type="text/javascript" src="./src/code.js" defer></script>
-    <!-- MathJax -->
-    <script id="MathJax-script" type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-</head>
-<body>
-    <div id="env">
-        <canvas id="painting-area"></canvas>
-    </div>
-    <div id="bar">
-        <div id="paint">
-            <button onclick="changeTool(0)">Caixa de texto</button>
-            <button onclick="changeTool(1)">Desenho livre</button>
-            <button onclick="changeTool(2)">Borracha</button>
+    <head>
+        <title>Math Board</title>
+        <link rel="stylesheet" type="text/css" href="./style/style.css" />
+        <link rel="stylesheet" type="text/css" href="./style/reset.css" />
+        <link rel="stylesheet" type="text/css" href="./style/calculator.css" />
+        <link
+            rel="stylesheet"
+            href="fontawesome-free-6.2.1-web/css/all.css"
+            <meta
+            charset="utf-8"
+        />
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+        <script type="text/javascript" src="./src/code.js" defer></script>
+        <!-- MathJax -->
+        <script
+            id="MathJax-script"
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+            async
+        ></script>
+    </head>
+    <body>
+        <div id="env">
+            <canvas id="painting-area"></canvas>
         </div>
-        <div id="text">
-            <form name="form" onsubmit="return false;">
-                <textarea id="input" autofocus></textarea>
-                <button id="button" onclick="createBox();">▷</button>
-            </form>
+        <div id="bar">
+            <div id="paint">
+                <div id="open-tools">
+                    <i
+                        id="arrow-tools"
+                        class="fa-solid fa-caret-right"
+                        style="color: #ffffff"
+                    ></i>
+                    <div id="tools">
+                        <button
+                            title="Mover texto"
+                            id="tool-one"
+                            onclick="changeTool(0)"
+                        >
+                            <i class="fa-solid fa-t tool-one"></i>
+                        </button>
+                        <button
+                            title="Lápis"
+                            id="tool-two"
+                            onclick="changeTool(1)"
+                        >
+                            <i
+                                class="fa-solid fa-pencil tool-two"
+                                style="color: #ffffff"
+                            ></i>
+                        </button>
+                        <button
+                            title="Borracha"
+                            id="tool-three"
+                            onclick="changeTool(2)"
+                        >
+                            <i class="fa-solid fa-eraser tool-three"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="text">
+                <form name="form" onsubmit="return false;">
+                    <textarea id="input" autofocus></textarea>
+                    <button id="button" onclick="createBox();">▷</button>
+                </form>
+            </div>
+
+            <!-- Calculadora -->
+            <div class="open-calculator">
+                <i
+                    id="arrow-calculator"
+                    class="fa-solid fa-caret-right"
+                    style="color: #ffffff"
+                ></i>
+
+                <div class="calculator">
+                    <div class="result">0</div>
+                    <div class="buttons">
+                        <button class="bg-gray">C</button>
+                        <button class="bg-gray">±</button>
+                        <button class="bg-gray">%</button>
+                        <button class="bg-orange">÷</button>
+
+                        <button class="bg-light-gray">7</button>
+                        <button class="bg-light-gray">8</button>
+                        <button class="bg-light-gray">9</button>
+                        <button class="bg-orange">×</button>
+
+                        <button class="bg-light-gray">4</button>
+                        <button class="bg-light-gray">5</button>
+                        <button class="bg-light-gray">6</button>
+                        <button class="bg-orange">-</button>
+
+                        <button class="bg-light-gray">1</button>
+                        <button class="bg-light-gray">2</button>
+                        <button class="bg-light-gray">3</button>
+                        <button class="bg-orange">+</button>
+
+                        <button class="bg-light-gray button-zero">0</button>
+                        <button class="bg-light-gray">,</button>
+                        <button class="bg-orange">=</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <footer>
-        by <a href="https://github.com/anachan01h">@anachan01h</a>
-    </footer>
-</body>
+        <footer>
+            by
+            <a target="_blank" href="https://github.com/anachan01h"
+                >@anachan01h</a
+            >
+            and
+            <a
+                target="_blank"
+                style="color: #ff0040"
+                onpointerenter="this.style.color='#ce0033'"
+                onpointerout="this.style.color='#ff0040'"
+                href="https://github.com/EricLideme"
+                >@Grayve</a
+            >
+        </footer>
+    </body>
+    <script src="src/active.js"></script>
+    <script src="src/calculator.js"></script>
 </html>
