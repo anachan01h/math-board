@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Screen Configuration ----------------------------------------------------- */
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 8px;
+    background: url("../Bg_Math.jpg");
+    background-size: cover;
+    color: #ffffff;
+    font-family: sans-serif;
+    height: calc(100% - 16px);
+    overflow-x: hidden !important;
+}
+
+div#env {
+    border-radius: 5px;
+}
+
+canvas#painting-area {
+    background-color: #2e5b34;
+    border: 2px solid #888;
+    box-shadow: 0px 2px 10px 4px black;
+    border-radius: 5px;
+    z-index: 8192;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Paint Options ------------------------------------------------------------ */
+
+div#bar {
+    color: #fff;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+div#paint {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+#open-tools {
+    width: 40px;
+    height: 40px;
+    top: 1px;
+    position: relative;
+    background: #222222;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top: 2px solid #5a5a5a;
+    border-left: 2px solid #5a5a5a;
+    box-shadow: 0 2px 5px black;
+}
+
+#open-tools:hover #arrow-tools {
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+
+#tool-one:hover .tool-one,
+#tool-two:hover .tool-two,
+#tool-three:hover .tool-three {
+    transform: rotate(360deg);
+    transition: 0.7s;
+}
+
+.tool-one,
+.tool-two,
+.tool-three {
+    transition: 0.7s;
+}
+
+#open-tools:hover #tools {
+    left: -2px;
+    transition: 0.5s;
+}
+
+#arrow-tools {
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#tools {
+    transition: 0.5s;
+    position: relative;
+    left: -80px;
+    top: 10px;
+}
+
+#tool-one,
+#tool-two,
+#tool-three {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+#tool-one:hover,
+#tool-two:hover,
+#tool-three:hover {
+    background: #010101;
+    transition: 0.5s;
+}
+
+.active {
+    transition: 0.5s;
+    background: #000 !important;
+}
+
+div#paint button {
+    background: #222222;
+    color: #fff;
+    box-shadow: 0 2px 5px black;
+}
+
+/* Text Input --------------------------------------------------------------- */
+
+div#text {
+    float: left;
+    height: 100%;
+    width: 60%;
+}
+
+div#text form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+textarea#input {
+    float: left;
+    width: 95%;
+    height: 100%;
+    background-color: #000;
+    box-shadow: 0px 2px 10px 4px black;
+    text-align: center;
+    color: #888;
+    border: 2px solid #888;
+    font-family: monospace;
+    font-weight: bold;
+    border-right: none;
+    outline: none;
+}
+
+button#button {
+    float: left;
+    margin-top: 1px;
+    border: 2px solid #888;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button#button:hover {
+    transition: 0.2s;
+    background-color: #222222;
+}
+
+/* Footer ------------------------------------------------------------------- */
+
+footer {
+    padding: 2px;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    bottom: -7px;
+}
+
+footer a {
+    color: #f28aa7;
+}
+
+footer a:hover {
+    color: #d06885;
+}
