@@ -107,15 +107,18 @@ div#paint {
 #tool-three {
     width: 40px;
     height: 40px;
+    transition: 0.5s;
 }
 
 #tool-one:hover,
 #tool-two:hover,
 #tool-three:hover {
     background: #010101;
+    transition: 0.5s;
 }
 
 .active {
+    transition: 0.5s;
     background: #000 !important;
 }
 

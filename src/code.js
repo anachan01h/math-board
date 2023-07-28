@@ -42,7 +42,7 @@ function updateSize() {
     ctx.canvas.width = window.innerWidth - 32 - 6;
     ctx.canvas.height = Math.floor(0.85 * (window.innerHeight - 32) - 13 - 6);
     promise.then(
-        function(bitmap) {
+        function (bitmap) {
             ctx.drawImage(bitmap, 0, 0);
         }
     );
@@ -98,7 +98,7 @@ canvas.addEventListener("mousedown", function (event) {
             ctx.moveTo(pos.x, pos.y);
             ctx.strokeStyle = "#FFF";
             ctx.lineWidth = 2;
-        
+
             canvas.addEventListener("mousemove", draw);
         } else {
             canvas.addEventListener("mousemove", erase);
@@ -129,27 +129,28 @@ function createBox() {
     box.style.position = "absolute";
     box.style.left = "50px";
     box.style.top = "50px";
+    box.style.zIndex = "3000";
     box.style.fontSize = "32pt";
     window.MathJax.typeset();
 
     // Event Listeners
-    box.addEventListener("mouseenter", function() {
+    box.addEventListener("mouseenter", function () {
         showBorder(box);
     });
-    box.addEventListener("mouseleave", function() {
+    box.addEventListener("mouseleave", function () {
         hideBorder(box);
     });
-    const handler = function(event) {
+    const handler = function (event) {
         moveBox(box, event);
     }
-    box.addEventListener("mousedown", function(event) {
+    box.addEventListener("mousedown", function (event) {
         if (event.button === 0) {
             selectBox(box, event, handler);
         } else if (event.button === 2) {
             deleteBox(box);
         }
     });
-    box.addEventListener("mouseup", function(event) {
+    box.addEventListener("mouseup", function (event) {
         if (event.button === 0) {
             dropBox(handler);
         }
@@ -157,7 +158,7 @@ function createBox() {
 }
 
 function createEventHandler(box, handler) {
-    return function(event) {
+    return function (event) {
         handler(box, event);
     }
 }
